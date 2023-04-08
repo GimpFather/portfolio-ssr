@@ -1,9 +1,9 @@
 import { ImageListItem } from "@mui/material";
 import { motion } from "framer-motion";
 import { ImageItemProps } from "@/data/itemData";
-import { srcset } from "@/utils/srcset";
 import ImageItemBar from "./ImageItemBar";
 import { globals } from "@/data/globals";
+import Image from "next/image";
 
 const ImageItem = ({ img, cols, rows, title, subtitle }: ImageItemProps) => {
   return (
@@ -21,10 +21,13 @@ const ImageItem = ({ img, cols, rows, title, subtitle }: ImageItemProps) => {
       cols={cols || 1}
       rows={cols || 1}
     >
-      <img
-        {...srcset(img, globals.ROW_HEIGHT, rows, cols)}
+      <Image
+        width={cols * globals.ROW_HEIGHT}
+        height={rows * globals.ROW_HEIGHT}
+        src={img}
         alt={title}
         loading="lazy"
+        style={{ objectFit: "cover", width: "100%", height: "100%" }}
       />
       <ImageItemBar subtitle={subtitle} title={title} />
     </ImageListItem>

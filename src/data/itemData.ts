@@ -19,7 +19,7 @@ export const itemData: ImageItemProps[] = [
     title: "i'm just missing u",
     subtitle: "girl being worried and lovely at the same time",
     cols: 1,
-    rows: 2,
+    rows: 1,
   },
   {
     img: "https://cdn.discordapp.com/attachments/611221711102279710/1084587364611014736/IMG_2394.jpg",

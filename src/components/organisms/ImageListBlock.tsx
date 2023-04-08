@@ -5,7 +5,7 @@ import QuiltedImageList from "../molecules/QuiltedImageList/QuiltedImageList";
 const ImageListBlock = () => {
   return (
     <Container maxWidth="lg">
-      <Grid container justifyContent="space-between" alignItems="center">
+      <Grid container justifyContent="center" alignItems="center">
         <QuiltedImageList />
       </Grid>
     </Container>

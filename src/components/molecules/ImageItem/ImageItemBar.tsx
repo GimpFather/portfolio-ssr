@@ -8,7 +8,7 @@ const ImageItemBar = ({
 }: Omit<ImageItemProps, "rows" | "cols" | "img">) => {
   return (
     <ImageListItemBar
-      sx={{ margin: "4px", paddingX: "8px", backgroundColor: "violet" }}
+      sx={{ backgroundColor: "violet", marginX: "4px" }}
       title={title}
       subtitle={subtitle}
       actionIcon={
