@@ -1,16 +1,13 @@
 import PageHeadTag from "@/components/atoms/PageHeadTag";
-import { Box, Container } from "@mui/material";
-import Typography from "@mui/material/Typography";
-import Head from "next/head";
+import ImageListBlock from "@/components/organisms/ImageListBlock";
+import { Container } from "@mui/material";
 
 export default function TestPage() {
   return (
     <>
       <PageHeadTag title="Test Page" desc="This is just a test site" />
-      <Container>
-        <Box>
-          <Typography>Test</Typography>
-        </Box>
+      <Container maxWidth="lg">
+        <ImageListBlock />
       </Container>
     </>
   );
