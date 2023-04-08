@@ -1,25 +1,18 @@
-import {
-  IconButton,
-  ImageList,
-  ImageListItem,
-  ImageListItemBar,
-} from "@mui/material";
-import { ImageItemProps, itemData } from "../../data/itemData";
-import { motion } from "framer-motion";
-import ImageItem from "./ImageItem";
+import { ImageList } from "@mui/material";
+import { ImageItemProps, itemData } from "../../../data/itemData";
+import ImageItem from "../ImageItem/ImageItem";
+import { globals } from "@/data/globals";
 
-interface QuiltedImagesListProps {
+export interface QuiltedImagesListProps {
   openModal: (data: ImageItemProps) => void;
 }
 
-const QuiltedImageList = ({ openModal }: QuiltedImagesListProps) => {
-  const rowHeight = 350;
-
+const QuiltedImageList = () => {
   return (
     <ImageList
       variant="quilted"
       cols={3}
-      rowHeight={rowHeight}
+      rowHeight={globals.ROW_HEIGHT}
       sx={{ overflow: "hidden" }}
     >
       {itemData.map((item, key) => (

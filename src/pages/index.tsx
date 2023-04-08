@@ -1,7 +1,6 @@
 import PageHeadTag from "@/components/atoms/PageHeadTag";
 import { Box, Button, Container } from "@mui/material";
 import Typography from "@mui/material/Typography";
-import Head from "next/head";
 import { useRouter } from "next/router";
 
 export default function Home() {
