@@ -6,7 +6,7 @@ import Head from "next/head";
 export default function TestPage() {
   return (
     <>
-      <PageHeadTag title="Test Page" desc="This is just a desc site" />
+      <PageHeadTag title="Test Page" desc="This is just a test site" />
       <Container>
         <Box>
           <Typography>Test</Typography>
