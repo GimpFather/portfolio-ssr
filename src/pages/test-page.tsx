@@ -1,3 +1,4 @@
+import PageHeadTag from "@/components/atoms/PageHeadTag";
 import { Box, Container } from "@mui/material";
 import Typography from "@mui/material/Typography";
 import Head from "next/head";
@@ -5,12 +6,7 @@ import Head from "next/head";
 export default function TestPage() {
   return (
     <>
-      <Head>
-        <title>Test Page</title>
-        <meta name="description" content="This is just a TestPage" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <PageHeadTag title="Test Page" desc="This is just a desc site" />
       <Container>
         <Box>
           <Typography>Test</Typography>

@@ -1,3 +1,4 @@
+import PageHeadTag from "@/components/atoms/PageHeadTag";
 import { Box, Button, Container } from "@mui/material";
 import Typography from "@mui/material/Typography";
 import Head from "next/head";
@@ -12,12 +13,7 @@ export default function Home() {
 
   return (
     <>
-      <Head>
-        <title>Index Page</title>
-        <meta name="description" content="This is just a Index Page" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <PageHeadTag title="Index Page" desc="This is just a index site" />
       <Container>
         <Box sx={{ marginBottom: 10 }}>
           <Typography>This is index page</Typography>
