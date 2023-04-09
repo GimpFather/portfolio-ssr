@@ -7,7 +7,7 @@ const ImageListBlock = () => {
   const isDesktop = useMediaQuery(theme.breakpoints.up("md"));
 
   return (
-    <Container maxWidth={isDesktop && "lg"} disableGutters>
+    <Container maxWidth={isDesktop && "md"} disableGutters>
       <Grid container justifyContent="center" alignItems="center">
         <QuiltedImageList />
       </Grid>
