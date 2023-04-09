@@ -16,6 +16,7 @@ const ImageItem = ({ img, cols, rows, title, subtitle }: ImageItemProps) => {
         stiffness: 100,
         damping: 40,
       }}
+      whileHover={{ opacity: 0.55 }}
       sx={{ padding: "4px" }}
       key={img}
       cols={cols || 1}
