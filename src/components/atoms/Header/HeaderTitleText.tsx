@@ -1,7 +1,9 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, useTheme } from "@mui/material";
 import { motion } from "framer-motion";
 
 const HeaderTitleText = () => {
+  const theme = useTheme();
+
   return (
     <Box>
       <Typography
@@ -12,9 +14,9 @@ const HeaderTitleText = () => {
           type: "spring",
           stiffness: 100,
         }}
-        whileHover={{ opacity: 0.55 }}
+        whileHover={{ opacity: 0.75 }}
         variant="h3"
-        color="violet"
+        color={theme.palette.primary.main}
       >
         Julia Duda
       </Typography>
