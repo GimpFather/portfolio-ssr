@@ -1,11 +1,14 @@
-import { Box, Typography, useTheme } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import { motion } from "framer-motion";
 
-const HeaderTitleText = () => {
-  const theme = useTheme();
+interface HeaderTextProps extends muiTypographyVariants {
+  caption: string;
+  color: string;
+}
 
+const HeaderText = ({ caption, variant, color }: HeaderTextProps) => {
   return (
-    <Box>
+    <Box textAlign={"center"}>
       <Typography
         component={motion.div}
         initial={{ opacity: 0 }}
@@ -15,13 +18,13 @@ const HeaderTitleText = () => {
           stiffness: 100,
         }}
         whileHover={{ opacity: 0.75 }}
-        variant="h3"
-        color={theme.palette.primary.main}
+        variant={variant}
+        color={color}
       >
-        Julia Duda
+        {caption}
       </Typography>
     </Box>
   );
 };
 
-export default HeaderTitleText;
+export default HeaderText;
