@@ -8,7 +8,7 @@ const HeaderBlock = () => {
 
   return (
     <Container
-      maxWidth={isDesktop && "md"}
+      maxWidth={isDesktop && "sm"}
       disableGutters
       sx={{ marginY: 4, paddingTop: "16px" }}
     >
