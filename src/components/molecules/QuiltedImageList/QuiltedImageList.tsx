@@ -1,6 +1,7 @@
 import { ImageList, useMediaQuery, useTheme } from "@mui/material";
 import { ImageItemProps, itemData } from "../../../data/itemData";
 import ImageItem from "../ImageItem/ImageItem";
+import { tmpImageData } from "@/data/tmpImageData";
 import { globals } from "@/data/globals";
 
 export interface QuiltedImagesListProps {
@@ -18,7 +19,7 @@ const QuiltedImageList = () => {
       rowHeight={globals.ROW_HEIGHT}
       sx={{ overflow: "hidden" }}
     >
-      {itemData.map((item, key) => (
+      {tmpImageData.map((item, key) => (
         <ImageItem
           img={item.img}
           cols={isDesktop ? item.cols : 1}

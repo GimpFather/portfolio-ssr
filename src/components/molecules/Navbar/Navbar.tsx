@@ -1,7 +1,6 @@
 import NavbarLink from "@/components/atoms/Navbar/NavbarLink";
 import Grid2 from "@mui/material/Unstable_Grid2";
-import { categories } from "@/data/categories";
-import { AnimatePresence } from "framer-motion";
+import { tmpCategories } from "@/data/categories";
 import { useState } from "react";
 
 const Navbar = () => {
@@ -10,7 +9,7 @@ const Navbar = () => {
   return (
     <Grid2 container textAlign="center">
       <>
-        {categories.map((category, key) => {
+        {tmpCategories.map((category, key) => {
           return (
             <NavbarLink
               caption={category.name}
