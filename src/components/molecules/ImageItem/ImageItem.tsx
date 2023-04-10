@@ -29,6 +29,7 @@ const ImageItem = ({ img, cols, rows, title, subtitle }: ImageItemProps) => {
         alt={title}
         loading="lazy"
         style={{ objectFit: "cover", width: "100%", height: "100%" }}
+        quality={100}
       />
       <ImageItemBar subtitle={subtitle} title={title} />
     </ImageListItem>
