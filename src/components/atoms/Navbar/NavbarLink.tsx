@@ -1,16 +1,16 @@
-import { Box, Typography, useTheme } from "@mui/material";
+import { Typography, useTheme } from "@mui/material";
 import Grid2 from "@mui/material/Unstable_Grid2";
 import { motion } from "framer-motion";
-import { useState } from "react";
 
 type NavbarLinkProps = {
   caption: string;
+  onClick: () => void;
+  selected?: boolean;
   linkUrl?: string;
 };
 
-const NavbarLink = ({ caption }: NavbarLinkProps) => {
+const NavbarLink = ({ caption, selected, onClick }: NavbarLinkProps) => {
   const { palette } = useTheme();
-  const [onHover, setOnHover] = useState(false);
 
   return (
     <Grid2 xs={2}>
@@ -24,14 +24,13 @@ const NavbarLink = ({ caption }: NavbarLinkProps) => {
           damping: 40,
         }}
         whileHover={{ opacity: 0.55 }}
-        onHoverStart={() => setOnHover(true)}
-        onHoverEnd={() => setOnHover(false)}
+        onClick={onClick}
         sx={{
           color: palette.primary.main,
           position: "relative",
         }}
       >
-        {onHover ? (
+        {selected ? (
           <motion.div
             layoutId="underline"
             style={{
