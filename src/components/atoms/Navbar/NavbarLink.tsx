@@ -28,6 +28,7 @@ const NavbarLink = ({ caption, selected, onClick }: NavbarLinkProps) => {
         sx={{
           color: palette.primary.main,
           position: "relative",
+          cursor: "pointer",
         }}
       >
         {selected ? (
