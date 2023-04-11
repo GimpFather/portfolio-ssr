@@ -1,4 +1,4 @@
-import { Box, Container, Grid, useMediaQuery, useTheme } from "@mui/material";
+import { Container, useMediaQuery, useTheme } from "@mui/material";
 import React from "react";
 import Navbar from "../molecules/Navbar/Navbar";
 

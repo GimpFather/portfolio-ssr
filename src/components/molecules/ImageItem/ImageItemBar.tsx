@@ -1,7 +1,6 @@
 import { IconButton, ImageListItemBar, useTheme } from "@mui/material";
 import InfoIcon from "@mui/icons-material/Info";
-import { ImageItemProps } from "@/data/itemData";
-import { motion } from "framer-motion";
+import { ImageItemProps } from "@/types/ImageItem";
 
 const ImageItemBar = ({
   title,
