@@ -7,6 +7,7 @@ import type { AppProps } from "next/app";
 import { theme } from "@/styles/defaultTheme";
 import HeaderBlock from "@/components/organisms/HeaderBlock";
 import NavbarBlock from "@/components/organisms/NavbarBlock";
+import { Analytics } from "@vercel/analytics/react";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -15,6 +16,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <HeaderBlock />
         <NavbarBlock />
         <Component {...pageProps} />
+        <Analytics />
       </ThemeProvider>
     </CssBaseline>
   );
