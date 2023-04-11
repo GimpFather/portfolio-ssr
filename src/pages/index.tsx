@@ -1,25 +1,19 @@
 import PageHeadTag from "@/components/atoms/PageHeadTag";
-import { Box, Button, Container } from "@mui/material";
+import { Box, Container, useTheme } from "@mui/material";
 import Typography from "@mui/material/Typography";
-import { useRouter } from "next/router";
 
 export default function Home() {
-  const router = useRouter();
-
-  const handleClick = (path: string) => {
-    router.push(path);
-  };
+  const { palette } = useTheme();
 
   return (
     <>
       <PageHeadTag title="Index Page" desc="This is just a index site" />
-      <Container>
-        <Box sx={{ marginBottom: 10 }}>
-          <Typography>This is index page</Typography>
-        </Box>
-        <Box>
-          <Typography>Other pages:</Typography>
-          <Button onClick={() => handleClick("/test-page")}>test-page</Button>
+      <Container maxWidth="lg">
+        <Box textAlign="center" padding={8}>
+          <Typography variant="h6" color={palette.info.main}>
+            This is simple Index Page, at some point u gonna see there something
+            more!
+          </Typography>
         </Box>
       </Container>
     </>

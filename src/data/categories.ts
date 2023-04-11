@@ -1,47 +1,32 @@
 type Category = {
   name: string;
+  url: string;
   color?: string;
-  url?: string;
 };
-
-export const categories: Category[] = [
-  {
-    name: "Illustrations",
-  },
-  {
-    name: "Characters",
-  },
-  {
-    name: "Concept Arts",
-  },
-  {
-    name: "Mature",
-  },
-  {
-    name: "About Me!",
-  },
-  {
-    name: "Other",
-  },
-];
 
 export const tmpCategories: Category[] = [
   {
-    name: "category one",
+    name: "Index Page",
+    url: "/",
   },
   {
-    name: "category two",
+    name: "Placeholders",
+    url: "/test-page",
   },
   {
     name: "category three",
+    url: "",
   },
   {
     name: "category four",
+    url: "",
   },
   {
     name: "category five",
+    url: "",
   },
   {
     name: "category six",
+    url: "",
   },
 ];
