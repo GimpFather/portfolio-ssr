@@ -1,4 +1,4 @@
-import { Typography, useTheme } from "@mui/material";
+import { Typography, useMediaQuery, useTheme } from "@mui/material";
 import Grid2 from "@mui/material/Unstable_Grid2";
 import { motion } from "framer-motion";
 
@@ -10,10 +10,11 @@ type NavbarLinkProps = {
 };
 
 const NavbarLink = ({ caption, selected, onClick }: NavbarLinkProps) => {
-  const { palette } = useTheme();
+  const { palette, breakpoints } = useTheme();
+  const isDesktop = useMediaQuery(breakpoints.up("md"));
 
   return (
-    <Grid2 xs={2}>
+    <Grid2 xs={12} md={2} sx={{ paddingY: 1 }}>
       <Typography
         component={motion.div}
         initial={{ scale: 0 }}
@@ -36,8 +37,9 @@ const NavbarLink = ({ caption, selected, onClick }: NavbarLinkProps) => {
             layoutId="underline"
             style={{
               position: "absolute",
+              left: isDesktop ? 0 : "33%",
               bottom: "-5px",
-              width: "100%",
+              width: isDesktop ? "100%" : "33%",
               height: "2px",
               borderRadius: "4px",
               backgroundColor: palette.primary.main,
