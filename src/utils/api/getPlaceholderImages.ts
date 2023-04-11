@@ -1,4 +1,4 @@
-import { contentfulClient } from "./clients/contenfulClient";
+import { contentfulClient } from "@/utils/api/clients/contentfulClient";
 import { PlaceholderItemFields } from "./types/PlaceholderItem";
 
 const getPlaceholderItems = async () => {
