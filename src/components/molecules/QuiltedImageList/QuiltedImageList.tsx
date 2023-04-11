@@ -1,14 +1,15 @@
 import { ImageList, useMediaQuery, useTheme } from "@mui/material";
-import { ImageItemProps, itemData } from "../../../data/itemData";
+import { ImageItemProps } from "../../../data/itemData";
 import ImageItem from "../ImageItem/ImageItem";
-import { tmpImageData } from "@/data/tmpImageData";
 import { globals } from "@/data/globals";
+import { PlaceholderItem } from "@/utils/api/types/PlaceholderItem";
 
 export interface QuiltedImagesListProps {
-  openModal: (data: ImageItemProps) => void;
+  openModal?: (data: ImageItemProps) => void;
+  imageItems: PlaceholderItem[];
 }
 
-const QuiltedImageList = () => {
+const QuiltedImageList = ({ imageItems }: QuiltedImagesListProps) => {
   const theme = useTheme();
   const isDesktop = useMediaQuery(theme.breakpoints.up("md"));
 
@@ -19,13 +20,13 @@ const QuiltedImageList = () => {
       rowHeight={globals.ROW_HEIGHT}
       sx={{ overflow: "hidden" }}
     >
-      {tmpImageData.map((item, key) => (
+      {imageItems.map((item, key) => (
         <ImageItem
-          img={item.img}
-          cols={isDesktop ? item.cols : 1}
-          rows={isDesktop ? item.rows : 1}
-          subtitle={item.subtitle}
-          title={item.title}
+          img={`https:${item.fields.img.fields.file.url}`}
+          cols={isDesktop ? item.fields.cols : 1}
+          rows={isDesktop ? item.fields.row : 1}
+          subtitle={item.fields.subtitle}
+          title={item.fields.title}
           key={key}
         />
       ))}
