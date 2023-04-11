@@ -1,9 +1,9 @@
 import { ImageListItem } from "@mui/material";
 import { motion } from "framer-motion";
-import { ImageItemProps } from "@/data/itemData";
 import ImageItemBar from "./ImageItemBar";
 import { globals } from "@/data/globals";
 import Image from "next/image";
+import { ImageItemProps } from "@/types/ImageItem";
 
 const ImageItem = ({ img, cols, rows, title, subtitle }: ImageItemProps) => {
   return (

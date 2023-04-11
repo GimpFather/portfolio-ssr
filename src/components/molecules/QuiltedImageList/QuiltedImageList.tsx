@@ -1,8 +1,8 @@
 import { ImageList, useMediaQuery, useTheme } from "@mui/material";
-import { ImageItemProps } from "../../../data/itemData";
 import ImageItem from "../ImageItem/ImageItem";
 import { globals } from "@/data/globals";
 import { PlaceholderItem } from "@/utils/api/types/PlaceholderItem";
+import { ImageItemProps } from "@/types/ImageItem";
 
 export interface QuiltedImagesListProps {
   openModal?: (data: ImageItemProps) => void;
