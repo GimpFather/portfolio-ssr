@@ -15,7 +15,7 @@ export const tmpCategories: Category[] = [
   },
   {
     name: "Projects",
-    url: "",
+    url: "/projects",
   },
   {
     name: "Contact",
