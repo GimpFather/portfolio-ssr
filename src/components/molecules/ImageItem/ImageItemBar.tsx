@@ -1,11 +1,14 @@
 import { IconButton, ImageListItemBar, useTheme } from "@mui/material";
 import InfoIcon from "@mui/icons-material/Info";
-import { ImageItemProps } from "@/types/ImageItem";
+import React from "react";
 
-const ImageItemBar = ({
-  title,
-  subtitle,
-}: Omit<ImageItemProps, "rows" | "cols" | "img">) => {
+type ImageItemBarProps = {
+  title: string;
+  subtitle: string;
+  handleClick: () => void;
+};
+
+const ImageItemBar = ({ title, subtitle, handleClick }: ImageItemBarProps) => {
   const { palette } = useTheme();
 
   return (
@@ -20,7 +23,8 @@ const ImageItemBar = ({
             padding: "8px",
             marginRight: "8px",
           }}
-          aria-label={`info about ${title}`}
+          onClick={handleClick}
+          aria-label={`Informations about ${title} image.`}
         >
           <InfoIcon />
         </IconButton>
