@@ -6,27 +6,19 @@ type Category = {
 
 export const tmpCategories: Category[] = [
   {
-    name: "Index Page",
+    name: "About Me",
     url: "/",
   },
   {
-    name: "Placeholders",
+    name: "Images",
     url: "/test-page",
   },
   {
-    name: "category three",
+    name: "Projects",
     url: "",
   },
   {
-    name: "category four",
-    url: "",
-  },
-  {
-    name: "category five",
-    url: "",
-  },
-  {
-    name: "category six",
+    name: "Contact",
     url: "",
   },
 ];

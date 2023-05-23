@@ -14,7 +14,7 @@ const NavbarLink = ({ caption, selected, onClick }: NavbarLinkProps) => {
   const isDesktop = useMediaQuery(breakpoints.up("md"));
 
   return (
-    <Grid2 xs={12} md={2} sx={{ paddingY: 1 }}>
+    <Grid2 xs={12} md={3} sx={{ paddingY: 1 }}>
       <Typography
         component={motion.div}
         initial={{ scale: 0 }}

@@ -7,12 +7,12 @@ const HeaderTitleBar = () => {
   return (
     <Grid justifyContent="center" alignItems="center">
       <HeaderText
-        caption="Your Name"
+        caption="Julia Duda"
         variant="h3"
         color={palette.primary.main}
       />
       <HeaderText
-        caption="~someday u will see there a cool subtitle~"
+        caption="~im trying to work with things that makes me happy~"
         variant="h5"
         color={palette.primary.main}
       />
