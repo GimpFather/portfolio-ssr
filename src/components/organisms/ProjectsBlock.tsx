@@ -39,7 +39,7 @@ const ProjectsBlock = ({ projects }: ProjectsBlockProps) => {
       >
         {projects.map((project, key) => {
           return (
-            <Grid sm={12} md={4} sx={{ width: globals.ROW_HEIGHT }}>
+            <Grid key={key} sm={12} md={4} sx={{ width: globals.ROW_HEIGHT }}>
               <Card
                 component={motion.div}
                 initial={{ scale: 0 }}
